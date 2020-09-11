@@ -1,0 +1,380 @@
+/*main rulez*/
+:root {
+    --main-bg-color: #1d1d1d;
+    --main-text-color: #eeeeee;
+    --main-lite-text-color: #6e6e6e;
+    --main-buttons-bg-color: #474747;
+    --main-buttons-text-color: #f1f1f1;
+    --main-box-bg-color: #313131;
+    --secoundry-box-bg-color: #525252;
+}
+svg {
+    width: 30px;
+    height: 30px;
+}
+svg path {
+    fill: #ffffff;
+}
+* {
+    font-family: 'Nunito', sans-serif;
+    color: #f7f7f7;
+}
+body {
+    overflow-x: hidden;
+    background: var(--main-bg-color);
+}
+button {
+    all: unset;
+    padding: 13px 23px;
+    border-radius: 100px;
+    color: var(--main-buttons-text-color);
+    background-color: var(--main-buttons-bg-color);
+    text-transform: uppercase;
+}
+a {
+    text-decoration: none;
+    color:unset;
+}
+a:hover {
+    color:unset;
+}
+.fas {
+    color: #ffffff;
+}
+.small-text {
+    color: var(--main-lite-text-color)
+}
+.smart-scroll{
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+}
+  .scrolled-down{
+    transform:translateY(-100%); transition: all 0.3s ease-in-out;
+}
+  .scrolled-up{
+    transform:translateY(0); transition: all 0.3s ease-in-out;
+}
+/*main rules endz*/
+
+
+
+
+
+
+/*the navbar stuff starts*/
+
+
+
+.scrolled-down{
+    transform:translateY(-100%);
+    transition: all 0.3s ease-in-out;
+}
+.scrolled-up{
+    transform:translateY(0); transition: all 0.3s ease-in-out;
+}
+.bot-nav {/*hiding the mobile navbar at wide screens*/
+    display: none;
+}
+.main-nav {/*adding a background transition*/
+    transition: all 0.5s ease;
+    background-color: var(--main-bg-color);
+}
+.main-nav * {/*adding a background transition*/
+    transition: all 0.5s ease;
+    color: #ffffff;
+}
+.left-nav-part {/*the logo and links style*/
+    padding: 0;
+    align-items: flex-end;
+}
+.left-nav-part .navbar {
+    margin-left: 140px;
+}
+.main-nav .logo {
+    cursor: pointer;
+}
+.main-nav .logo svg {
+    width: 60px;
+}
+.main-nav ul {
+    list-style: none;
+    margin: unset;
+    padding: 0;
+}
+.main-nav ul li {
+    margin: 0 10px;
+}
+.icons {
+    padding-right: 0;
+}
+.main-nav .icons .icon {
+    margin: 0 10px;
+    cursor: pointer;
+}
+.icon img {
+    width: 30px;
+}
+.main-nav .icons img {
+    width: 30px;
+}
+
+
+.search {/*the search container*/
+    padding: 10px 20px;
+    border-radius: 50px;
+    transition: all ease-in-out 0.3s;
+}
+.search svg {/*the search icon by the way it's so fu*king bad*/
+    fill: #ffffff;
+    width: 30px;
+    height: 30px;
+}
+.search input {/*removing every thing at the input*/
+    all: unset;
+    width: 0;
+    transition: all ease-in-out 0.3s;
+}
+.search input:focus {
+    color: #dfdfdf;
+}
+.search.streach i {
+    fill: #ffffff;
+}
+.search.streach {
+    background-color: #333333;
+}
+.search.streach input {
+    width: 170px;
+    color: #313131;
+    cursor: text;
+}
+
+i.icon {
+    display: none;
+    font-size: 1.7rem;
+}
+
+
+.cart {/*the cart style*/
+    position: relative;
+    cursor: pointer;
+}
+.cart span {
+    position: absolute;
+    top: -5px;
+    right: -10px;
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+    background-color: tomato;
+    border-radius: 50%;
+    text-align: center;
+    color: #fdfdfd;
+    line-height: 20px;
+}
+/*the main navbar style ends*/
+/*the header starts and rember to put some overlay strocked text*/
+header {
+    position: relative;
+    /*height: 90vh;*//*cause we made it with js*/
+    overflow: hidden;
+    color: #ffffff;
+}
+header * {
+    color: #ffffff;
+}
+.menu-icon {
+    display: none;
+}
+header img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+header .opacity {/*overlay element*/
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #1616168c;
+    z-index: 2;
+}
+header .opacity .opacity-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 100px 10vw;
+}
+header .opacity h1 {
+    font-size: 7vw;
+    text-transform: capitalize;
+}
+
+.slider {
+    z-index: 3;
+}
+.swiper-wrapper {
+    align-items: center;
+}
+.slider {/*the slider styling*/
+    overflow: unset;
+    transform: translateY(-172px);
+    padding-left: 10vw;
+}
+.slide {
+    width: 265px;
+    border-radius: 13px;
+    overflow: hidden;
+    box-shadow: 0px 0px 20px -12px #000000;
+    height: 344px;
+}
+.slide .upper, .slide .lower {
+    height: 50%;
+    width: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+}
+.slide .upper {
+    background-color: var(--secoundry-box-bg-color);
+}
+.slide .upper .shoe {
+    width: 120px;
+    height: 120px;
+    fill: #ffffff;
+}
+.slide .upper .shoe path {
+    fill: #ffffff;
+}
+.slide .lower {
+    background-color: var(--main-box-bg-color);
+}
+.slide .lower h2 {
+    color: #f1f1f1;
+}
+.next {
+    padding: 20px;
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    background-color: var(--main-buttons-bg-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.seemore-after::after {/*the css title*/
+    content: 'See More';
+    padding: 10px 20px;
+    background-color: var(--main-buttons-bg-color);
+    position: absolute;
+    width: 135px;
+    text-align: center;
+    transition: all ease 0.3s;
+    top: 80px;
+    opacity: 0;
+    border-radius: 13px;
+    color: #ffffff;
+}
+.seemore-after::before {/*the tryngle*/
+    content: '';
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid var(--main-buttons-bg-color);
+    top: 70px;
+    opacity: 0;
+    transition: all ease 0.3s;
+    position: absolute;
+}
+.seemore-after:hover::before {
+    animation: titleAfter 0.3s ease forwards 0.5s;/*the delay for the animatioon is so important*/
+}
+.seemore-after:hover::after {
+    animation: titleAfter 0.3s ease forwards 0.5s;/*seem*/
+}
+@keyframes titleAfter {/*the animation of the title*/
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+.next img {
+    width: 35px;
+}
+.swiper-container {
+    width: 100%;
+    height: 100%;
+}
+
+
+
+
+
+.fa-star {
+    color: #7b7b7b;
+}
+.checked {
+    color: #ffae00;
+}
+.trending-grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+    column-gap: 30px;
+    row-gap: 30px;
+}
+.trending-header h1 {
+    color: var(--main-text-color);
+    text-transform: uppercase;
+    word-spacing: 20px;
+    font-weight: 600;
+}
+.trending .product {
+    width: 100%;
+    box-shadow: 0px 0px 20px -15px #000000;
+    border-radius: 13px;
+    overflow: hidden;
+    color: var(--main-text-color);
+}
+.trending .product img {
+    width: 100%;
+    height: 233px;
+    object-fit: cover;
+    object-position: center;
+}
+.trending .product .info {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: var(--main-box-bg-color);
+    align-items: center;
+}
+.trending .product .info .rate {
+    margin: auto;
+}
+.trending .product .info .name {
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+.trending .product .info .prev-price {
+    color: var(--main-lite-text-color);
+    text-decoration: line-through;
+}
+.trending .product .info .now-price {
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+
