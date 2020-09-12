@@ -75,6 +75,12 @@ a:hover {
 .scrolled-up{
     transform:translateY(0); transition: all 0.3s ease-in-out;
 }
+.onscroll-will-change {
+    will-change: transform;
+}
+.swiper-slide {
+    will-change: opacity;
+}
 .bot-nav {/*hiding the mobile navbar at wide screens*/
     display: none;
 }
@@ -360,6 +366,7 @@ header .opacity h1 {
     justify-content: space-between;
     background: var(--main-box-bg-color);
     align-items: center;
+    position: relative;
 }
 .trending .product .info .rate {
     margin: auto;
@@ -375,6 +382,46 @@ header .opacity h1 {
 .trending .product .info .now-price {
     font-size: 1.2rem;
     font-weight: 500;
+}
+.add-to-cart {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background-color: #7b7b7b;
+    height: 30px;
+    width: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all ease 0.2s;
+}
+.add-to-cart :nth-child(2) {
+    opacity: 0;
+    color: #008cff;
+    position: absolute;
+}
+.add-to-cart-anim {
+    animation: add-to-cart 0.2s ease-out forwards;
+    background-color: var(--main-bg-color);
+}
+@keyframes add-to-cart {
+    0% {
+        transform: scale(0.7);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+.add-to-cart-anim :first-child {
+    opacity: 0;
+}
+.add-to-cart-anim :nth-child(2) {
+    opacity: 1;
 }
 
 
