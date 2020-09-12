@@ -73,28 +73,23 @@ if ($('.smart-scroll').length > 0) { // check if element exists
 $('.add-to-cart').click(function() {
     this.classList.toggle('add-to-cart-anim');
 });
+/*
 document.querySelectorAll('.animation').forEach((elmnt) => {
     elmnt.addEventListener('mouseenter', removeHint);
     elmnt.addEventListener('animationEnd', removeHint);
 });
 
 $(window).on('scroll', function() {
-    scroll_top = $(this).scrollTop();
-    if(scroll_top < last_scroll_top) {
-        $('.smart-scroll').addClass('onscroll-will-change');
-    }
-    else {
-        $('.smart-scroll').removeClass('onscroll-will-change');
-    }
-    last_scroll_top = scroll_top;
+    $('.smart-scroll').addClass('onscroll-will-change');
 });
 
 function hintBrowser() {
-    // The optimizable properties that are going to change
-    // in the animation's keyframes block
+    console.log('.done');
     this.style.willChange = 'transform, opacity';
 }
   
 function removeHint() {
     this.style.willChange = 'auto';
+
 }
+*/

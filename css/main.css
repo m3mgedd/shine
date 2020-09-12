@@ -8,6 +8,9 @@
     --main-box-bg-color: #313131;
     --secoundry-box-bg-color: #525252;
 }
+.animation:hover {
+    will-change: opacity, transform;
+}
 svg {
     width: 30px;
     height: 30px;
@@ -22,6 +25,7 @@ svg path {
 body {
     overflow-x: hidden;
     background: var(--main-bg-color);
+    padding-bottom: 70px;
 }
 button {
     all: unset;
@@ -73,7 +77,9 @@ a:hover {
     transition: all 0.3s ease-in-out;
 }
 .scrolled-up{
-    transform:translateY(0); transition: all 0.3s ease-in-out;
+    transform:translateY(0);
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 2px 20px -10px #000000;
 }
 .onscroll-will-change {
     will-change: transform;
