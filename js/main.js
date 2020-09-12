@@ -89,12 +89,12 @@ $(window).on('scroll', function() {
     last_scroll_top = scroll_top;
 });
 
-function hintBrowser(anim) {
+function hintBrowser() {
     // The optimizable properties that are going to change
     // in the animation's keyframes block
-    anim.style.willChange = 'transform, opacity';
+    this.style.willChange = 'transform, opacity';
 }
   
-function removeHint(anim) {
-    anim.style.willChange = 'auto';
+function removeHint() {
+    this.style.willChange = 'auto';
 }
